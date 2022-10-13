@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title>{{ page.title }}</title>
+{% include head.html %}
+</head>
+
+<body>
+    {% include header.html %}
+	<div class="inmargin">
+		<article>
+			<div class="title">{{ page.title }}</div>
+			<p>
+				{{ page.authors }}<br/>
+				{{ page.publication }}
+			</p>
+			{{ content }}
+		</article>
+	</div>
+    {% include footer.html %}
+</body>
+
+</html>

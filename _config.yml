@@ -1,0 +1,44 @@
+timezone: America/Denver
+encoding: utf-8
+markdown: kramdown
+domain: www.example.com
+exclude:
+  - README.md
+  - LICENSE
+  - docker-compose.yml
+  - .gitignore
+  - .sass-cache/
+  - .jekyll-cache/
+  - template-bare.html
+  - template-layout.html
+  - template.md
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      section: "home"
+  -
+    scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
+      section: "publications"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      section: "projects"
+collections:
+  publications:
+    output: true
+    permalink: /pub/:path.html
+  projects:
+    output: true
+    permalink: /proj/:path.html
+
+  
